@@ -20,7 +20,7 @@ const LatestIssues = async () => {
       <Table.Root>
         <Table.Body>
           {issues.map((issue) => (
-            <Table.Row key={Number(issue.id)}>
+            <Table.Row key={issue.id}>
               <Table.Cell>
                 <Flex justify={"between"}>
                   <Flex direction={"column"} align={"start"} gap={"2"}>

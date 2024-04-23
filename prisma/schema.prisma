@@ -15,7 +15,7 @@ model Widget {
 }
 
 model Issue {
-  id             BigInt   @id @default(autoincrement())
+  id             Int      @id @default(dbgenerated("nextval('issue_id_seq'::regclass)::INT"))
   title          String
   description    String
   status         Status   @default(OPEN)

@@ -10,7 +10,7 @@ CREATE TABLE "Widget" (
 
 -- CreateTable
 CREATE TABLE "Issue" (
-    "id" INT8 NOT NULL DEFAULT unique_rowid(),
+    "id" INT4 NOT NULL DEFAULT nextval('issue_id_seq'::regclass)::INT,
     "title" STRING NOT NULL,
     "description" STRING NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'OPEN',
